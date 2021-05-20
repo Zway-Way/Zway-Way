@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CameraTracking : MonoBehaviour
 {
-    public GameObject Ball;
+    public GameObject ball;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    private Vector3 offset = new Vector3();
+    private Vector3 offset = new Vector3(-10.02f,1.88f,-6.26f);
 
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Ball.transform.position + offset;
+        transform.position = ball.transform.position + offset;
     }
 }
 
