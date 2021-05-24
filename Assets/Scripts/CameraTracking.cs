@@ -15,7 +15,7 @@ public class CameraTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        offset = new Vector3(1.35f, 2.1f, 7.29f);
+        offset = new Vector3(-0.06f, 2.1f, -7.33f);
         transform.position = ball.transform.position + offset;
         Debug.Log("offest is + " + offset);
     }
