@@ -18,6 +18,7 @@ public class BallMovement : MonoBehaviour
     void Update()
     {
         // move the ball forward
+        transform.Translate(Vector3.back * Time.deltaTime * 5);
         horizontalInput = Input.GetAxis("Horizontal");
         //forwardInput = Input.GetAxis("Vertical");
         //make use of the vertical code to add a jump mechanic
