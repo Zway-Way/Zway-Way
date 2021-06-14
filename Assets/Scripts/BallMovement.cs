@@ -26,7 +26,7 @@ public class BallMovement : MonoBehaviour
         //transform.Rotate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         //rotates the ball on horizontal axis
         transform.Translate(Vector3.left * Time.deltaTime * turnSpeed * horizontalInput);
-
+        
     }
 }
 
