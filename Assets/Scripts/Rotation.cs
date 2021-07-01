@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraTracking : MonoBehaviour
+public class Rotation : MonoBehaviour
 {
-    public GameObject ball;
-    private Vector3 offset;
+    private Vector3 rotation;
     // Start is called before the first frame update
     void Start()
     {
-
+        rotation = new Vector3(0, 0, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        offset = new Vector3(-0.06f, 2.1f, -7.33f);
-        transform.position = ball.transform.position + offset;
+        transform.Rotate(rotation);
     }
 }
