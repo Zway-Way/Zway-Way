@@ -17,11 +17,31 @@ public class CameraTracking : MonoBehaviour
     {
         offset = new Vector3(-0.06f, 2.1f, -7.33f);
         transform.position = ball.transform.position + offset;
-        Debug.Log("offest is + " + offset);
+        //Debug.Log("offest is + " + offset);
     }
 }
 
+//public Transform target;
 
+//public float lerpSpeed = -0.06f;
+
+//public float zOffset = -7.33f;
+
+//public float yPos = 2.1f;
+
+//#region Monobehaviour API
+
+//void LateUpdate()
+//{
+//    var currentPosition = transform.position;
+
+//    var targetPosition = new Vector3(target.position.x, yPos + target.position.y, target.position.z + zOffset);
+
+//    transform.position = Vector3.Lerp(currentPosition, targetPosition, Time.deltaTime * lerpSpeed);
+//}
+
+//    #endregion
+//}
 //using System.Collections;
 //using System.Collections.Generic;
 //using UnityEngine;
