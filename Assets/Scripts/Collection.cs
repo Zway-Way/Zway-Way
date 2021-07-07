@@ -9,6 +9,7 @@ public class Collection : MonoBehaviour
         if (collision.collider.tag == "Coin") 
         {
             Destroy(collision.gameObject);
+            CoinCounter.CoinCount += 1;
         }
 
     }

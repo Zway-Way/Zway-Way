@@ -11,9 +11,10 @@ public class BallMovement : MonoBehaviour
     private float forwardInput;
     private Rigidbody rb;
     public LayerMask groundLayers;
-    public float jumpForce = 5;
+    public float jumpForce = 65;
     public SphereCollider col;
     #region Monobehaviour API
+    public Vector3 debug;
 
     void Start()
     {
@@ -38,10 +39,14 @@ public class BallMovement : MonoBehaviour
         // Apply calculations to move horiziontally 
         move(moveHorizontally);
 
+
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("I am pressing space");
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            debug = Vector3.up * jumpForce;
+
+            Debug.Log(debug);
+            Debug.Log("[ v0.0.1 ]: Player has pressed space, attempting to increase Y value");
+            rb.AddForce(debug, ForceMode.Impulse);
         }
 
         bool IsGrounded()
