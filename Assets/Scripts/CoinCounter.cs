@@ -10,12 +10,15 @@ public class CoinCounter : MonoBehaviour
 
     void Start()
     {
+        //calls the text font
         score = GetComponent<Text>();
     }
 
     
     void Update()
     {
-        score.text = "Coins: " + CoinCount;
+        // Adds the coins collected to the counter while updating
+        //every new coin collected to new total
+        score.text = "Coins: " + CoinCount + "/4";
     }
 }

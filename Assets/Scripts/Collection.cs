@@ -8,7 +8,9 @@ public class Collection : MonoBehaviour
     {
         if (collision.collider.tag == "Coin") 
         {
+            // dissapears once collected
             Destroy(collision.gameObject);
+            // updates the coin count by 1
             CoinCounter.CoinCount += 1;
         }
 

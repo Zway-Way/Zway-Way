@@ -6,7 +6,7 @@ public class BallMovement : MonoBehaviour
 {
 
     private float speed = 20;
-    private float turnSpeed = 15;
+    private float turnSpeed = 10;
     private float horizontalInput; 
     private float forwardInput;
     private Rigidbody rb;
@@ -34,18 +34,15 @@ public class BallMovement : MonoBehaviour
         Vector3 moveHorizontally = (Vector3.left * Time.deltaTime * turnSpeed * horizontalInput);
 
         // Apply calculations to move forward
-        move(moveForward);
+        transform.Translate(moveForward);
 
         // Apply calculations to move horiziontally 
-        move(moveHorizontally);
+        transform.Translate(moveHorizontally);
 
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             debug = Vector3.up * jumpForce;
-
-            Debug.Log(debug);
-            Debug.Log("[ v0.0.1 ]: Player has pressed space, attempting to increase Y value");
             rb.AddForce(debug, ForceMode.Impulse);
         }
 
